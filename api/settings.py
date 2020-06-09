@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'api.wsgi.application'
 #use heroku db
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-# DATABASE_URL=$(heroku config:get DATABASE_URL -a your-app)
+DATABASE_URL=$(heroku config:get DATABASE_URL -a your-app)
 
 
 
