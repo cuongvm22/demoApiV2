@@ -1,7 +1,7 @@
 from django.db import models
 
 class Product(models.Model):
-	seri = models.IntegerField()
+	serial = models.IntegerField()
 	id = models.CharField(max_length = 200, primary_key = True)
 	engName = models.CharField(max_length = 200, default = 'N/A')
 	vieName = models.CharField(max_length = 200, default = 'N/A')
@@ -11,10 +11,9 @@ class Product(models.Model):
 	exp = models.CharField(max_length = 20)
 	uses = models.CharField(max_length = 1000)
 	manuals = models.CharField(max_length = 1000)
-	image = models.CharField(max_length = 100)
 	origin = models.CharField(max_length = 50)
 	urlInfo = models.CharField(max_length = 50)
 	publish = models.CharField(max_length = 50)
-	note = models.CharField(max_length = 1000)
-
-
+	
+	def __str__(self):
+		return vieName + '|' + engName
